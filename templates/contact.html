@@ -7,8 +7,14 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a> |
+        <a href="{{ url_for('about') }}">About</a> |
+        <a href="{{ url_for('projects') }}">Projects</a> |
+        <a href="{{ url_for('contact') }}">Contact</a> |
+        <a href="{{ url_for('messages') }}">Messages</a>
+    </nav>
     <h1>Contact Me</h1>
-
     <form action="/contact" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
@@ -18,13 +24,5 @@
 
         <button type="submit">Send Message</button>
     </form>
-
-    <nav>
-        <a href="{{ url_for('home') }}">Home</a> |
-        <a href="{{ url_for('about') }}">About</a> |
-        <a href="{{ url_for('projects') }}">Projects</a> |
-        <a href="{{ url_for('contact') }}">Contact</a> |
-        <a href="{{ url_for('messages') }}">Messages</a>
-    </nav>
 </body>
 </html>
