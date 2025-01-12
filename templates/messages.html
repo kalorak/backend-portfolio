@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+</head>
+<body>
+    <h1>All Messages</h1>
+
+    <ul>
+        {% for message in messages %}
+            <li>
+                <strong>{{ message[0] }}</strong> ({{ message[2] }}): {{ message[1] }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/about">About</a> |
+        <a href="/projects">Projects</a> |
+        <a href="/contact">Contact</a> |
+        <a href="/messages">Messages</a>
+    </nav>
+</body>
+</html>
