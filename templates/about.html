@@ -7,6 +7,13 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a> |
+        <a href="{{ url_for('about') }}">About</a> |
+        <a href="{{ url_for('projects') }}">Projects</a> |
+        <a href="{{ url_for('contact') }}">Contact</a> |
+        <a href="{{ url_for('messages') }}">Messages</a>
+    </nav>
     <h1>About Me</h1>
 
     <p>Hello, I'm Mark! I'm a passionate backend developer in the making. Below, you can view or download my most recent CV.</p>
