@@ -27,8 +27,8 @@ def about():
 def projects():
     project_list = [
         {"name": "Portfolio Website", "description": "A Flask-powered website to showcase my backend skills."},
-        {"name": "To-Do App", "description": "A simple task management app built with Python and Flask."},
-        {"name": "Blog API", "description": "A RESTful API for a blogging platform."},
+        {"name": "To-Do App", "description": "A simple task management app built with Python and Flask.(in development)"},
+        {"name": "Blog API", "description": "A RESTful API for a blogging platform.(in development)"},
     ]
     return render_template("projects.html", projects=project_list)
 
