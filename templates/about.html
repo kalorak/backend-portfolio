@@ -29,6 +29,13 @@
         <a class="download-btn" href="{{ url_for('static', filename='Mark_Kalotai_CV.pdf') }}" download>📄 Download My CV</a>
     </p>
 
+     <!-- Coursera Badges Section -->
+     <h2>My Coursera Badges</h2>
+     <div class="badge-container">
+         <img src="{{ url_for('static', filename='coursera_python_badge.png') }}" alt="Python Badge">
+         <img src="{{ url_for('static', filename='coursera_backend_badge.png') }}" alt="Backend Development Badge">
+     </div>
+
     <nav>
         <a href="{{ url_for('home') }}">Home</a> |
         <a href="{{ url_for('about') }}">About</a> |
