@@ -7,7 +7,6 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     </head>
 <body>
-    <h1>Welcome to My Portfolio Website!</h1>
     <nav>
         <a href="{{ url_for('home') }}">Home</a> |
         <a href="{{ url_for('about') }}">About</a> |
@@ -15,10 +14,10 @@
         <a href="{{ url_for('contact') }}">Contact</a> |
         <a href="{{ url_for('messages') }}">Messages</a>
     </nav>
+    <h1>Welcome to My Portfolio Website!</h1>
     <p>Hi, I'm Mark. I'm on a new journey to become a backend and eventually a full stack developer!</p
-
-    <h2>What You'll Find Here</h2>
     <p>This portfolio showcases my backend development journey. Check out the <a href="/projects">Projects</a> section to see what I’ve built!</p>
+    <p>You can also leave me <a href="/projects">Messages</a> for improvements, tips and tricks!</p>
 
     <footer>
         <p>&copy; 2025 Mark Kalotai</p>
