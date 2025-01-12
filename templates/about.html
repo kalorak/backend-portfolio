@@ -13,11 +13,13 @@
 
     <!-- Embed the PDF viewer -->
     <h2>My CV</h2>
-    <embed src="{{ url_for('static', filename='Mark_Kalotai_Updated_CV_2') }}" type="application/pdf" width="100%" height="600px">
+    <div class="pdf-container">
+        <embed src="{{ url_for('static', filename='Mark_Kalotai_CV.pdf') }}" type="application/pdf" width="100%" height="600px">
+    </div>
 
     <!-- Download link for the CV -->
-    <p>
-        <a href="{{ url_for('static', filename='Mark_Kalotai_Updated_CV_2') }}" download>📄 Download My CV</a>
+    <p style="text-align: center;">
+        <a class="download-btn" href="{{ url_for('static', filename='Mark_Kalotai_CV.pdf') }}" download>📄 Download My CV</a>
     </p>
 
     <nav>
