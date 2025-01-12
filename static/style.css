@@ -146,22 +146,14 @@ nav a:hover {
 .download-btn:hover {
     background-color: #555;
 }
-.badge-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.certificate-container {
+    text-align: center;
     margin: 20px auto;
-    flex-wrap: wrap;
 }
 
-.badge-container img {
-    width: 200px;
+.certificate-container img {
+    max-width: 80%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-}
-
-.badge-container img:hover {
-    transform: scale(1.05);
 }
