@@ -146,10 +146,13 @@ nav a:hover {
 .download-btn:hover {
     background-color: #555;
 }
+
 .certificate-container {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 20px auto;
-    
+}
 .certificate-container img {
     max-width: 70%;
     height: auto;
