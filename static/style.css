@@ -153,9 +153,10 @@ nav a:hover {
 }
 
 .certificate-container img {
-    max-width: 70%;
-    height: auto;
+    width: 792px; 
+    height: 612px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    object-fit: cover; 
 }
