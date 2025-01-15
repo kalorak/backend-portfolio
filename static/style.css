@@ -160,4 +160,36 @@ nav a:hover {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.certificate-container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; 
+    margin: 0 auto;
+}
+
+.certificate-container1 img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.certificate-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; 
+    margin: 0 auto;
+}
+
+.certificate-container2 img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
