@@ -32,3 +32,7 @@ build/
 ### VS Code ###
 .vscode/
 .DS_Store
+.DS_Store
+.idea/
+.DS_Store
+.idea/
