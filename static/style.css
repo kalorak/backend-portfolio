@@ -8,10 +8,11 @@ body {
     line-height: 1.6;
 }
 
-/* Headings */
-h1, h2 {
+/* Centering Headings & Text */
+h1, h2, p {
     text-align: center;
     color: #222;
+    margin: 20px 0;
 }
 
 /* Navigation Bar */
@@ -25,7 +26,7 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #fff !important;  /* Force white color to stay visible */
     text-decoration: none;
     margin: 0 20px;
     font-weight: bold;
@@ -56,6 +57,14 @@ nav a:hover {
     font-size: 20px;
     max-width: 600px;
     margin: 0 auto;
+}
+
+/* Centering Text Block */
+.centered-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Content Container */
