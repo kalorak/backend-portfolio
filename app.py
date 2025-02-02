@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request, g
+from flask import Flask, render_template, request, g, send_from_directory
 import sqlite3
+import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='', static_folder='static', template_folder='templates')
 
 DATABASE = "contact.db"
 
@@ -27,8 +28,8 @@ def about():
 def projects():
     project_list = [
         {"name": "Portfolio Website", "description": "A Flask-powered website to showcase my backend skills."},
-        {"name": "To-Do App", "description": "A simple task management app built with Python and Flask.(in development)"},
-        {"name": "Blog API", "description": "A RESTful API for a blogging platform.(in development)"},
+        {"name": "To-Do App", "description": "A simple task management app built with Python and Flask. (in development)"},
+        {"name": "Blog API", "description": "A RESTful API for a blogging platform. (in development)"},
     ]
     return render_template("projects.html", projects=project_list)
 
@@ -55,6 +56,11 @@ def messages():
     cur = db.execute("SELECT name, message, timestamp FROM messages ORDER BY timestamp DESC")
     messages = cur.fetchall()
     return render_template("messages.html", messages=messages)
+
+# Static files route (for CSS, JS, images)
+@app.route('/static/<path:filename>')
+def serve_static(filename):
+    return send_from_directory("static", filename)
 
 # Close the database connection when the app shuts down
 @app.teardown_appcontext
