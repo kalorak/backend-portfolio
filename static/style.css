@@ -1,121 +1,140 @@
 /* General styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f5;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-}
-
-h1, h2 {
     color: #333;
-    text-align: center;
+    line-height: 1.6;
 }
 
-p {
-    color: #555;
+/* Headings */
+h1, h2 {
     text-align: center;
+    color: #222;
 }
 
-/* Navigation bar */
+/* Navigation Bar */
 nav {
-    text-align: center;
-    background-color: #333;
+    display: flex;
+    justify-content: center;
+    background: #222;
     padding: 15px;
-    margin-bottom: 20px;
     border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 20px;
     font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
 }
 
 nav a:hover {
-    color: #007bff;
-    text-decoration: underline;
+    color: #00aaff;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Content Container */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Buttons */
 .download-btn {
     display: inline-block;
-    background-color: #007bff;
+    background: #007bff;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    transition: background 0.3s ease-in-out;
 }
 
 .download-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Content box */
-.content {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #0056b3;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background: #222;
     color: #fff;
-    position: fixed;
-    width: 100%;
+    font-size: 14px;
+    position: relative;
     bottom: 0;
+    width: 100%;
 }
 
+/* List Styles */
 ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    color: #333;
+    text-align: center;
 }
 
 li {
-    background-color: #333;
+    background: white;
     margin: 10px auto;
-    padding: 20px;
+    padding: 15px;
     max-width: 600px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-nav {
-    text-align: center;
-    background-color: #333;
-    padding: 10px;
-    margin: 20px auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
 
-nav a {
-    color: fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    font-size: 18px;
-}
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
 
-nav a:hover {
-    text-decoration: underline;
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .container {
+        padding: 15px;
+    }
 }
 
 .content {
