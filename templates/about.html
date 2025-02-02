@@ -7,44 +7,43 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <nav>
-        <a href="{{ url_for('home') }}">Home</a> |
-        <a href="{{ url_for('about') }}">About</a> |
-        <a href="{{ url_for('projects') }}">Projects</a> |
-        <a href="{{ url_for('contact') }}">Contact</a> |
-        <a href="{{ url_for('messages') }}">Messages</a>
-    </nav>
-    <h1>About Me</h1>
+<nav>
+    <a href="{{ url_for('home') }}">Home</a> |
+    <a href="{{ url_for('about') }}">About</a> |
+    <a href="{{ url_for('projects') }}">Projects</a> |
+    <a href="{{ url_for('contact') }}">Contact</a> |
+    <a href="{{ url_for('messages') }}">Messages</a>
+</nav>
+<h1>About Me</h1>
 
-    <p>Hello, I'm Mark! I'm a passionate Software Engineer in the making. Below, you can view or download my most recent CV as well as my Certificates.</p>
+<p>Hello, I'm Mark! I'm a passionate Software Engineer in the making. Below, you can view or download my most recent CV as well as my Certificates.</p>
 
-    <!-- PDF -->
-    <h2>My CV</h2>
-    <div class="pdf-container">
-        <embed src="{{ url_for(filename='Mark_Kalotai_CV.pdf') }}" type="application/pdf" width="100%" height="600px">
-    </div>
+<!-- PDF -->
+<h2>My CV</h2>
+<div class="pdf-container">
+    <embed src="{{ url_for('static', filename='Mark_Kalotai_CV.pdf') }}" type="application/pdf" width="100%" height="600px">
+</div>
 
+<p style="text-align: center;">
+    <a class="download-btn" href="{{ url_for('static', filename='Mark_Kalotai_CV.pdf') }}" download>📄 Download My CV</a>
+</p>
 
-    <p style="text-align: center;">
-        <a class="download-btn" href="{{ url_for(filename='Mark_Kalotai_CV.pdf') }}" download>📄 Download My CV</a>
-    </p>
+<!-- Certificates -->
+<h2>My Learning Certificates</h2>
+<div class="certificate-container">
+    <img src="{{ url_for('static', filename='IBM_certificate_.png') }}" alt="IBM Certificate">
+</div>
 
-     <!-- Certificates -->
-     <h2>My Learning Certificates</h2>
-     <div class="certificate-container">
-        <img src="{{ url_for(filename='IBM_certificate_.png') }}" alt="IBM Certificate">
-    </div>
-    
-    <div class="certificate-container">
-        <img src="{{ url_for(filename='frontend.png') }}" alt="Frontend Certificate">
-    </div>
-    
-    <div class="certificate-container">
-        <img src="{{ url_for(filename='backend.png') }}" alt="Backend Certificate">
-    </div>
+<div class="certificate-container">
+    <img src="{{ url_for('static', filename='frontend.png') }}" alt="Frontend Certificate">
+</div>
 
-    <footer>
-        <p>&copy; 2025 Mark Kalotai</p>
-    </footer>
+<div class="certificate-container">
+    <img src="{{ url_for('static', filename='backend.png') }}" alt="Backend Certificate">
+</div>
+
+<footer>
+    <p>&copy; 2025 Mark Kalotai</p>
+</footer>
 </body>
 </html>
