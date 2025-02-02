@@ -1,8 +1,8 @@
-from flask import Flask, render_template, request, g, send_from_directory
+from flask import Flask, render_template, request, g, send_from_directory, url_for
 import sqlite3
 import os
 
-app = Flask(__name__, static_url_path='', static_folder='static', template_folder='templates')
+app = Flask(__name__, static_url_path='/static', static_folder='static', template_folder='templates')
 
 DATABASE = "contact.db"
 
@@ -11,6 +11,7 @@ def get_db():
     db = getattr(g, "_database", None)
     if db is None:
         db = g._database = sqlite3.connect(DATABASE)
+        db.row_factory = sqlite3.Row  # Ensure results can be accessed like dictionaries
     return db
 
 # Home route
@@ -37,15 +38,15 @@ def projects():
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
-        name = request.form["name"]
-        message = request.form["message"]
+        name = request.form.get("name")
+        message = request.form.get("message")
 
-        # Insert form data into the database
-        db = get_db()
-        db.execute("INSERT INTO messages (name, message) VALUES (?, ?)", (name, message))
-        db.commit()
-
-        return f"Thank you, {name}! Your message has been saved."
+        if name and message:
+            # Insert form data into the database
+            db = get_db()
+            db.execute("INSERT INTO messages (name, message) VALUES (?, ?)", (name, message))
+            db.commit()
+            return f"Thank you, {name}! Your message has been saved."
 
     return render_template("contact.html")
 
@@ -60,7 +61,7 @@ def messages():
 # Static files route (for CSS, JS, images)
 @app.route('/static/<path:filename>')
 def serve_static(filename):
-    return send_from_directory("static", filename)
+    return send_from_directory(app.static_folder, filename)
 
 # Close the database connection when the app shuts down
 @app.teardown_appcontext
@@ -70,4 +71,4 @@ def close_connection(exception):
         db.close()
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))

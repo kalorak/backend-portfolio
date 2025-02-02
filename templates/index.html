@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mark Kalotai - Portfolio</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Kalotai - Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('serve_static', filename='style.css') }}">
+</head>
 <body>
+<header>
+    <h1>Welcome to My Portfolio</h1>
     <nav>
-        <a href="{{ url_for('home') }}">Home</a> |
-        <a href="{{ url_for('about') }}">About</a> |
-        <a href="{{ url_for('projects') }}">Projects</a> |
-        <a href="{{ url_for('contact') }}">Contact</a> |
-        <a href="{{ url_for('messages') }}">Messages</a>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('projects') }}">Projects</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('messages') }}">Messages</a></li>
+        </ul>
     </nav>
-    <h1>Welcome to My Portfolio Website!</h1>
-    <p>Hi, I'm Mark. I'm on a new journey to become a backend and eventually a full stack developer!</p>
-    <p>This portfolio showcases my backend development journey. Check out the <a href="/projects">Projects</a> section to see what I’m working on!</p>
-    <p>You can also <a href="/contact">Contact</a> me for improvements, tips and tricks!</p>
+</header>
 
-    <footer>
-        <p>&copy; 2025 Mark Kalotai</p>
-    </footer>
+<section>
+    <h2>About Me</h2>
+    <p>Welcome to my personal portfolio website! Here, you can learn more about me, explore my projects, and get in touch.</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Mark Kalotai. All rights reserved.</p>
+</footer>
 </body>
 </html>
