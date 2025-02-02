@@ -1,17 +1,19 @@
-/* General styles */
+/* Sci-Fi Inspired Modern Styling */
+
+/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
     margin: 0;
     padding: 0;
-    color: #333;
     line-height: 1.6;
 }
 
-/* Centering Headings & Text */
+/* Headings & Text Centering */
 h1, h2, p {
     text-align: center;
-    color: #222;
+    color: #fff;
     margin: 20px 0;
 }
 
@@ -19,14 +21,14 @@ h1, h2, p {
 nav {
     display: flex;
     justify-content: center;
-    background: #222;
+    background: #111;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
 }
 
 nav a {
-    color: #fff !important;  /* Force white color to stay visible */
+    color: #00ffff !important;  /* Always visible neon blue */
     text-decoration: none;
     margin: 0 20px;
     font-weight: bold;
@@ -35,22 +37,25 @@ nav a {
 }
 
 nav a:hover {
-    color: #00aaff;
+    color: #ff00ff;  /* Magenta hover effect */
+    text-shadow: 0 0 8px rgba(255, 0, 255, 0.7);
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(to right, #007bff, #0056b3);
+    background: linear-gradient(135deg, #001f3f, #0066ff);
     color: white;
     border-radius: 10px;
     margin: 20px;
+    box-shadow: 0 0 15px rgba(0, 102, 255, 0.6);
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 42px;
     margin-bottom: 10px;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
 }
 
 .hero p {
@@ -59,29 +64,32 @@ nav a:hover {
     margin: 0 auto;
 }
 
-/* Centering Text Block */
+/* Centered Text Section */
 .centered-text {
     text-align: center;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
-/* Content Container */
+/* Content Box */
 .container {
     max-width: 1000px;
     margin: 30px auto;
     padding: 20px;
-    background: white;
+    background: #121212;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 102, 255, 0.6);
 }
 
 /* Buttons */
 .download-btn {
     display: inline-block;
-    background: #007bff;
-    color: #fff;
+    background: #00ffff;
+    color: #111;
     padding: 12px 24px;
     border-radius: 5px;
     text-decoration: none;
@@ -90,19 +98,22 @@ nav a:hover {
 }
 
 .download-btn:hover {
-    background: #0056b3;
+    background: #ff00ff;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background: #222;
-    color: #fff;
+    background: #111;
+    color: #00ffff;
     font-size: 14px;
     position: relative;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
 /* List Styles */
@@ -113,12 +124,12 @@ ul {
 }
 
 li {
-    background: white;
+    background: #222;
     margin: 10px auto;
     padding: 15px;
     max-width: 600px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 102, 255, 0.5);
 }
 
 /* Responsive Design */
@@ -131,7 +142,6 @@ li {
     nav a {
         display: block;
         margin: 10px 0;
-        color: #fff !important;
     }
 
     .hero {
@@ -147,26 +157,19 @@ li {
     }
 }
 
-.content {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+/* PDF & Image Styling */
 .pdf-container {
     margin: 20px auto;
     max-width: 800px;
-    border: 1px solid #ccc;
+    border: 1px solid #00ffff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
 .download-btn {
     display: inline-block;
-    background-color: #333;
-    color: #fff;
+    background-color: #00ffff;
+    color: #111;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -174,19 +177,21 @@ li {
 }
 
 .download-btn:hover {
-    background-color: #555;
+    background-color: #ff00ff;
+    color: #fff;
 }
 
+/* Certificate Styling */
 .certificate-container {
     text-align: center;
     margin: 20px auto;
 }
 
 .certificate-container img {
-    width: 792px; 
-    height: 612px;
+    width: 100%;
+    max-width: 600px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
     margin-bottom: 20px;
-    object-fit: cover; 
+    object-fit: cover;
 }
