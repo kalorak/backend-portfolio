@@ -195,3 +195,19 @@ li {
     margin-bottom: 20px;
     object-fit: cover;
 }
+
+/* Calculator button*/
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}

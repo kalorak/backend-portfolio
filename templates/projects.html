@@ -20,6 +20,10 @@
         {% for project in projects %}
             <li>
                 <strong>{{ project.name }}</strong>: {{ project.description }}
+                <div class="project">
+                    <h3><a href="https://your-calculator-url.onrender.com" class="btn">Web-based Calculator</a></h3>
+                    <p>A simple calculator built with Flask for basic arithmetic operations.</p>
+                </div>
             </li>
         {% endfor %}
     </ul>
