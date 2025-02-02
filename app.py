@@ -60,8 +60,8 @@ def messages():
 
 # Static files route (for CSS, JS, images)
 @app.route('/static/<path:filename>')
-def serve_static(filename):
-    return send_from_directory(app.static_folder, filename)
+def static_files(filename):
+    return send_from_directory('static', filename)
 
 # Close the database connection when the app shuts down
 @app.teardown_appcontext
