@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Messages</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Projects</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for(filename='style.css') }}">
 </head>
 <body>
     <nav>
@@ -14,12 +14,12 @@
         <a href="{{ url_for('contact') }}">Contact</a> |
         <a href="{{ url_for('messages') }}">Messages</a>
     </nav>
-    <h1>All Messages</h1>
+    <h1>My Projects</h1>
 
     <ul>
-        {% for message in messages %}
+        {% for project in projects %}
             <li>
-                <strong>{{ message[0] }}</strong> ({{ message[2] }}): {{ message[1] }}
+                <strong>{{ project.name }}</strong>: {{ project.description }}
             </li>
         {% endfor %}
     </ul>

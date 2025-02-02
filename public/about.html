@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Mark</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for(filename='style.css') }}">
 </head>
 <body>
     <nav>
@@ -21,26 +21,26 @@
     <!-- PDF -->
     <h2>My CV</h2>
     <div class="pdf-container">
-        <embed src="{{ url_for('static', filename='Mark_Kalotai_CV.pdf') }}" type="application/pdf" width="100%" height="600px">
+        <embed src="{{ url_for(filename='Mark_Kalotai_CV.pdf') }}" type="application/pdf" width="100%" height="600px">
     </div>
 
 
     <p style="text-align: center;">
-        <a class="download-btn" href="{{ url_for('static', filename='Mark_Kalotai_CV.pdf') }}" download>📄 Download My CV</a>
+        <a class="download-btn" href="{{ url_for(filename='Mark_Kalotai_CV.pdf') }}" download>📄 Download My CV</a>
     </p>
 
      <!-- Certificates -->
      <h2>My Learning Certificates</h2>
      <div class="certificate-container">
-        <img src="{{ url_for('static', filename='IBM_certificate_.png') }}" alt="IBM Certificate">
+        <img src="{{ url_for(filename='IBM_certificate_.png') }}" alt="IBM Certificate">
     </div>
     
     <div class="certificate-container">
-        <img src="{{ url_for('static', filename='frontend.png') }}" alt="Frontend Certificate">
+        <img src="{{ url_for(filename='frontend.png') }}" alt="Frontend Certificate">
     </div>
     
     <div class="certificate-container">
-        <img src="{{ url_for('static', filename='backend.png') }}" alt="Backend Certificate">
+        <img src="{{ url_for(filename='backend.png') }}" alt="Backend Certificate">
     </div>
 
     <footer>
